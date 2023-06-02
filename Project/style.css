@@ -61,6 +61,10 @@ body{
     align-items: center;
 }
 
+#close{
+    display: none;
+}
+
 #hero{
     background-image: url(img/back.png);
     height: 90vh;
@@ -286,8 +290,7 @@ body{
 }
 
 .section-p3{
-    padding: 0 80px;
-    margin-left: 40px;
+    padding: 40px 80px;
 }
 
 #banner{
@@ -1060,4 +1063,545 @@ footer .col .follow .icon img{
 .tacbox label{
     color: white;
     padding-bottom: 1cm;
+}
+
+@media (max-width: 768px) {
+    .section-p2{
+        padding: 40px 100px;
+    }
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+        /* height: 100vh; */
+    }
+
+    #navbar.active{
+        right: 0px;
+    }
+
+    #navbar li{
+        margin-bottom: 25px;
+    }
+
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #hero{
+        height: 30vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #featured .pro-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 90px;
+    }
+
+    #llbag{
+        display: none;
+    }
+
+    #about-head{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #about-head img {
+        width: 100%;
+        padding-right: 1px;
+        padding-bottom: 1cm;
+        left: 10px;
+        height: 400px;
+    }
+
+    #feature .fe-box img.img4,
+    #feature .fe-box img.img5,
+    #feature .fe-box img.img6{
+        padding-top: 1cm;
+    }
+
+    #features .row .one .details strong{
+        font-size: 18px;
+    }
+
+    #features .row .one img{
+        height: 300px;
+    }
+
+    #features .row .one:nth-child(3) img {
+        object-fit: cover;
+    }
+
+    #banner{
+        height: 50%;
+    }
+
+    .pro-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 90px;
+    }
+
+    .shop #hero{
+        height: 25vh;
+    }
+
+    .shop #hero h2{
+        color: white;
+        padding-left: 100px;
+        padding-bottom: 20px;
+    }
+    
+    .shop #hero p{
+        color: white;
+        padding-left: 50px;
+    }
+
+    .section-p3{
+        padding: 40px 0;
+    }
+
+    .gallery #hero{
+        height: 25vh;
+    }
+
+    .gallery #hero h2{
+        color: white;
+        padding-left: 100px;
+        padding-bottom: 20px;
+    }
+    
+    .gallery #hero p{
+        color: white;
+        padding-left: 50px;
+    }
+
+    .gallery #recommended p{
+        padding-bottom: 1cm;
+    }
+
+    .gallery #butuhbantuan .plsjadi img.gallery1{
+        width: 400px;
+    }
+
+    .gallery #butuhbantuan .plsjadi img.gallery2{
+        width: 300px;
+        
+    }
+
+    .gallery #butuhbantuan .plssangat img.gallery3{
+        width: 300px;
+    }
+
+    .gallery #butuhbantuan .plssangat img.gallery4{
+        width: 400px;
+        height: 190px;
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .gallery #butuhbantuan .amin img.gallery5{
+        width: 300px;
+        margin-top: -30px;
+    }
+
+    .gallery #butuhbantuan .amin img.gallery6{
+        width: 350px;
+        height: 250px;
+        margin-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .gallery #butuhbantuan .amin img.gallery7{
+        width: 300px;
+        margin-left: 50px;
+        margin-top: -60px;
+    }
+
+    .gallery #butuhbantuan .amin img.gallery10{
+        width: 370px;
+        margin-left: -30px;
+    }
+
+    .gallery #butuhbantuan .capek{
+        margin-top: -300px;
+    }
+
+    .gallery #butuhbantuan .capek img.gallery8{
+        width: 430px;
+        height: 400px;
+    }
+
+    .gallery #butuhbantuan .capek img.gallery9{
+        width: 260px;
+        height: 270px;
+    }
+
+    #contact-details .details p.cnganteng{
+        padding-left: 0px;
+    }
+
+    #contact-details .map iframe{
+        padding-top:40px;
+        padding-left: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .event #hero{
+        height: 25vh;
+        padding: 0 100px;
+    }
+
+    .event #hero h2{
+        color: white;
+        padding-left: 220px;
+        padding-bottom: 20px;
+    }
+    
+    .event #hero p{
+        color: white;
+        padding-left: 70px;
+    }
+
+    .event .season1{
+        height: 50%;
+        
+    }
+    .event .season2{
+        height: 50%;
+    }
+    .event .season3{
+        height: 50%;
+    }
+    .event .season4{
+        height: 50%;
+    }
+
+    .event #vouchers .vou-grid{
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+    }
+
+    .regis{
+        width: 100%;
+        height: 100%;
+    }
+
+    .regis video {
+        min-width: 80%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+}
+
+@media (max-width: 468px) {
+    #header{
+        padding: 20px 40px;
+    }
+
+    #navbar{
+        width: 150px;
+    }
+
+    #mobile i{
+        font-size: 18px;
+    }
+
+    .section-p1{
+        padding: 40px 40px;
+    }
+
+    #hero{
+        padding: 0 30px;
+        height: 18vh;
+    }
+
+    #hero h5{
+        font-size: 8px;
+    }
+    #hero h2{
+        font-size: 12px;
+    }
+    #hero h1{
+        font-size: 15px;
+    }
+    #hero p{
+        font-size: 10px;
+    }
+    #hero button{
+        padding: 7px 20px 9px 20px;
+        margin-left: 50px;
+        font-size: 10px;
+        font-weight: 500;
+    }
+    #about-head img{
+        height: 300px;
+    }
+
+    #feature .fe-box img{
+        padding-bottom: 1cm;
+        margin-left: 20px;
+    }
+
+    #feature .fe-box img.img2,
+    #feature .fe-box img.img1{
+        padding-bottom: 1.5cm;
+    }
+
+    #feature .fe-box img.img6{
+        padding-bottom: 0;
+    }
+
+    #feature .fe-box img.img5{
+        padding-bottom: 0.5cm;
+    }
+
+    .section-p2{
+        padding:0 70px ;
+    }
+
+    #featured .pro-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+
+    .shop #hero{
+        height: 15vh;
+        padding: 0 100px;
+    }
+
+    .shop #hero h2{
+        color: white;
+        padding-left: 55px;
+        padding-bottom: 10px;
+    }
+    
+    .shop #hero p{
+        color: white;
+        padding-left: 25px;
+        font-size: 8px;
+    }
+
+    .shop #recommended h3{
+        padding-bottom: 10px;
+    }
+
+    .shop #recommended p{
+        padding: 0 20px;
+    }
+
+    .pro-grid{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;        
+    }
+
+    .shop #featured{
+        padding-left: 75px;
+    }
+
+    .gallery #hero{
+        height: 15vh;
+        padding: 0 65px;
+    }
+
+    .gallery #hero p{
+        color: white;
+        padding-left: 25px;
+        font-size: 8px;
+    }
+
+    .gallery #recommended h3{
+        padding-bottom: 10px;
+    }
+
+    .gallery #recommended p{
+        padding: 0 20px;
+    }
+
+    .gallery #butuhbantuan .plsjadi{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-p3{
+        padding: 20px 0;
+    }
+
+    .gallery #butuhbantuan .plsjadi img.gallery1{
+        padding-bottom: 20px;
+        padding-left: 40px;
+        width: 400px;
+    }
+    .gallery #butuhbantuan .plsjadi img.gallery2{
+        padding-left: 40px;
+        width: 349px;
+    }
+    .gallery #butuhbantuan .plssangat img.gallery3{
+        width: 347px;
+        padding-left: 40px;
+        padding-bottom: 25px;
+    }
+    .gallery #butuhbantuan .plssangat img.gallery4{
+        width: 345px;
+        padding-left: 40px;
+        height: 250px;
+        margin-top: -5px;
+    }
+    .gallery #butuhbantuan .amin img.gallery5{
+        width: 345px;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    .gallery #butuhbantuan .amin img.gallery6{
+        width: 307px;
+        padding-left: 1px;
+        margin-top: -30px;
+    }
+    .gallery #butuhbantuan .amin img.gallery7{
+        width: 326px;
+        margin-left: 22px;
+        height: 350px;
+        margin-top: -75px;
+    }
+    .gallery #butuhbantuan .amin img.gallery10{
+        width: 380px;
+        margin-top: -340px;
+        padding-left: 70px;
+        height: 180px;
+    }
+    .gallery #butuhbantuan .capek img.gallery8{
+        width: 450px;
+        height: 300px;
+        padding-right: 100px;
+        padding-left: 40px;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        margin-top: 130px;
+    }
+    .gallery #butuhbantuan .capek img.gallery9{
+        width: 350px;
+        height: 180px;
+        padding-left: 40px;
+        margin-top: -10px;
+    }
+
+    .section-p4{
+        padding: 10px 5px;
+    }
+
+    #contact-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-details .details h3{
+        font-size: 9px;
+    }
+    #contact-details .details p.cnganteng{
+        font-size: 9px;
+    }
+    #contact-details .details li i{
+        font-size: 9px;
+    }
+    #contact-details .details li p{
+        font-size: 10px;
+    }
+    #contact-details .map{
+        width: 350px;
+        height: 300px;
+        margin-right: 30px;
+    }
+
+    .event #hero{
+        height: 15vh;
+        padding: 0 65px;
+    }
+
+    .event #hero p{
+        color: white;
+        padding-left: 22px;
+        font-size: 8px;
+    }
+
+    .event #hero h2{
+        padding-bottom: 10px;
+        padding-left: 110px;
+    }
+
+    .event #vouchers .vou2 {
+        width: 450px;
+        height: 40px;
+        margin-left: 40px;
+    }
+
+    .event #vouchers .vou1 {
+        width: 250px;
+        height: 40px;
+    }
+
+    .event #vouchers .vou1 h6{
+        font-size: 9px;
+    }
+    .event #vouchers .vou1 i{
+        font-size: 9px;
+    }
+
+    .section-p5{
+        padding: 20px 20px;
+    }
+    .event #vouchers .vou2 i {
+        margin-left: -25px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .col .follow .icon img {
+        margin-bottom: 20px;
+        margin-top: -20px;
+    }
 }
