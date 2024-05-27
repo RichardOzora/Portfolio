@@ -102,7 +102,6 @@ function updateActiveLink() {
         links[0].classList.add('active');
     }
 
-    // Check if scroll position is at or beyond the last section
     const lastSection = sections[sections.length - 1];
     const lastSectionElement = document.querySelector(lastSection.id);
     const lastSectionTop = lastSectionElement.offsetTop - headerHeight;
@@ -142,13 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const category = button.id;
 
-            // Remove the activated class from all buttons
             filterButtons.forEach(btn => btn.classList.remove('activated'));
 
-            // Add the activated class to the clicked button
             button.classList.add('activated');
 
-            // Show or hide projects based on the category
             projects.forEach(project => {
                 if (category === 'all') {
                     project.style.display = 'block';
