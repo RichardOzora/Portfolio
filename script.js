@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function scrollToElement(elementSelector, offset = 0, instance = 0) {
     if (elementSelector === 'top') {
-        // Scroll to the top of the page
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
@@ -155,6 +154,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+const bar = document.getElementById('bar');
+const close = document.getElementById('close');
+const nav = document.getElementById('navbar');
+
+if(bar){
+    bar.addEventListener('click', () => {
+        nav.classList.add('active');
+    })
+}
+
+if(close){
+    close.addEventListener('click', () =>{
+        nav.classList.remove('active');
+    })
+}
 
 
 

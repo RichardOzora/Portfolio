@@ -28,12 +28,12 @@
 </head>
 <body>
     
-    <div class="loader">
-        <div class="line"></div>
-        <div class="circles">
-                <span></span><span></span><span></span><span></span><span></span><span></span>
+        <div class="loader">
+            <div class="line"></div>
+            <div class="circles">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
         </div>
-    </div>
 
     <section id="header">
         <a href="#"><img src="img/main logo.png" class="logo" alt=""></a>
@@ -43,10 +43,14 @@
                 <li class="link"><a href="#" class="active" data-scroll-target="top">Home</a></li>
                 <li id="link1" class="link"><a href="#" data-scroll-target="#about-me">About Me</a></li>
                 <li id="link2" class="link"><a href="#" data-scroll-target="#forfun3">Projects</a></li>
+                <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
                 <div class="cv">
                     <a href="img/Richard's CV.pdf" download="Richard's CV" target="_blank">Download CV <i class="fa-solid fa-download"></i></a>
                 </div>
             </ul>
+        </div>
+        <div id="mobile">
+            <i class="fa-solid fa-bars" id="bar"></i>
         </div>
     </section>
 
@@ -218,7 +222,7 @@
                     </div>
                     <div class="des">
                          <h4>HI-Toyz (E-Commerce Website)</h4>
-                         <a href="https://richardozora.github.io/E-Commerce-Website/index.html" target="_blank">Demo <i clss="fa-solid fa-arrow-right"></i></a>
+                         <a href="https://richardozora.github.io/E-Commerce-Website/index.html" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="image" data-category="website">
@@ -289,30 +293,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#content h1, #content h5, #content .ctc i").html(function(index, html){
+        function shouldRunAnimation() {
+            return window.innerWidth > 768;
+        }
+
+        $(document).ready(function() {
+            if (!shouldRunAnimation()) {
+                $('.loader').hide();
+                return;
+            }
+
+            $("#content h1, #content h5, #content .ctc i").html(function(index, html) {
                 return html.replace(/\S/g, '<span>$&</span>');
             });
 
             var tl = gsap.timeline();
 
             tl.to(".loader .line", {
-                scaleY:0,
+                scaleY: 0,
                 transformOrigin: 'top',
                 duration: 2,
                 delay: 0.2
-            })
+            });
 
             tl.to(".loader .circles span", {
-                scale : 0,
-                duration : 1.5,
-                stragger: {
-                    grid : [3,3],
+                scale: 0,
+                duration: 1.5,
+                stagger: {
+                    grid: [3, 3],
                     from: 'random',
-                    each: .2,
+                    each: 0.2,
                 }
             })
-
             .from("h1 span", {
                 x: "random(-500, 500, 100)",
                 y: "random(-500, 500, 100)",
@@ -321,7 +333,6 @@
                 delay: -0.5,
                 opacity: 0
             })
-
             .from("h5 span, .ctc i", {
                 x: "random(-100, 100)",
                 y: "random(-100, 100)",
@@ -337,8 +348,8 @@
             })
             .add(() => {
                 document.querySelector('.loader').style.display = 'none';
-            })
-        });
+            });
+        }); 
     </script>
     
     <script src="script.js"></script>
