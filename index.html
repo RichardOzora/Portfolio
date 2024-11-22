@@ -29,12 +29,12 @@
 </head>
 <body class="bg-sky-50">
     
-        <div class="loader">
-            <div class="line"></div>
-            <div class="circles">
-                    <span></span><span></span><span></span><span></span><span></span><span></span>
-            </div>
+    <div class="loader">
+        <div class="line"></div>
+        <div class="circles">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
+    </div>
 
     <section id="header">
         <div>
@@ -56,7 +56,7 @@
     <section id="content">
         <h1>Richard</h1>
         <div class="content-container">
-            <h5 class="text first-text">></h5>
+            <h5 class="text first-text">&gt;</h5>
             <h5 class="text sec-text">Front-End Developer</h5>
         </div>
         <div class="ctc">
@@ -279,7 +279,7 @@
                 return;
             }
 
-            $("#content h1, #content h5, #content .ctc i").html(function(index, html) {
+            $("#content h1, #content .content-container h5:not(.first-text), #content .ctc i").html(function(index, html) {
                 return html.replace(/\S/g, '<span>$&</span>');
             });
 
@@ -305,16 +305,22 @@
                 x: "random(-500, 500, 100)",
                 y: "random(-500, 500, 100)",
                 ease: "power2.inOut",
-                duration: 2,
+                duration: 1.5,
                 delay: -0.5,
                 opacity: 0
             })
-            .from("h5 span, .ctc i", {
+            .from(".content-container h5", {
                 x: "random(-100, 100)",
                 y: "random(-100, 100)",
                 ease: "power2.inOut",
-                duration: 2,
-                delay: -1,
+                duration: 1,
+                opacity: 0
+            }, "-=0.5")
+            .from(".ctc i", {
+                x: "random(-100, 100)",
+                y: "random(-100, 100)",
+                ease: "power2.inOut",
+                duration: 1,
                 opacity: 0
             })
             .from("#header", {
