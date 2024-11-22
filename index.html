@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Richard's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     </style>
@@ -26,18 +27,16 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&family=Ultra&display=swap');
     </style>
 </head>
-<body>
+<body class="bg-sky-50">
     
-        <div class="loader">
+        <!-- <div class="loader">
             <div class="line"></div>
             <div class="circles">
                     <span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
-        </div>
+        </div> -->
 
     <section id="header">
-        <a href="#"><img src="img/main logo.png" class="logo" alt=""></a>
-
         <div>
             <ul id="navbar">
                 <li class="link"><a href="#" class="active" data-scroll-target="top">Home</a></li>
@@ -45,7 +44,7 @@
                 <li id="link2" class="link"><a href="#" data-scroll-target="#forfun3">Projects</a></li>
                 <a href="#" id="close"><i class="fa-solid fa-x"></i></a>
                 <div class="cv">
-                    <a href="img/Richard's CV.pdf" download="Richard's CV" target="_blank">Download CV <i class="fa-solid fa-download"></i></a>
+                    <a href="img/Richard's CV.pdf" target="_blank">View CV</a>
                 </div>
             </ul>
         </div>
@@ -56,7 +55,10 @@
 
     <section id="content">
         <h1>Richard</h1>
-        <h5>Front-End Developer and UI Designer</h5>
+        <div class="content-container">
+            <h5 class="text first-text">></h5>
+            <h5 class="text sec-text">Front-End Developer</h5>
+        </div>
         <div class="ctc">
             <a href="https://www.linkedin.com/in/richardozora/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://github.com/RichardOzora" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -66,9 +68,9 @@
 
     <section id="about-me">
         <h1 data-text="About Me">About Me</h1>
-        <h2>Front-End Developer who cares deeply about user experience.</h2>
+        <h2 class="font-bold text-lg">Front-End Developer who cares deeply about user experience.</h2>
         <br>
-        <h2>Serious passion for UI Design and new technologies.</h2>
+        <h2 class="font-bold text-lg">Serious passion for UI Design and new technologies.</h2>
     </section>
 
     <section id="features">
@@ -113,86 +115,60 @@
     </section>
 
     <section id="forfun">
-        <h3>Tech</h3>
+        <h3>Skills</h3>
     </section>
 
-    <section id="tech">
-        <div class="container">
-            <div class="grid">
-                <div class="pros">
-                    <i class="fa-brands fa-html5"></i>
-                    <p>HTML</p>
-                </div>
-                <div class="pros">
-                    <i class="fa-brands fa-css3-alt"></i>
-                    <p>CSS</p>
-                </div>
-                <div class="pros">
-                    <i class="fa-brands fa-js"></i>
-                    <p>JavaScript</p>
-                </div>
-                <div class="pros">
-                    <i class="fa-brands fa-react"></i>
-                    <p>React</p>
-                </div>
-                <div class="pros">
-                    <i class="fa-brands fa-bootstrap"></i>
-                    <p>Bootstrap</p>
-                </div>
+    <div class="slider" style="
+    --width: 200px;
+    --height: 200px;
+    --quantity: 14;
+    ">
+        <div class="list">
+            <div class="item" style="--position: 1">
+                <img src="./img/html.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 2">
+                <img src="./img/css.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 3">
+                <img src="./img/js.jpg" alt=""/>
+            </div>
+            <div class="item" style="--position: 4">
+                <img src="./img/tailwind.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 5"> 
+                <img src="./img/bootstrap.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 6">
+                <img src="./img/react.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 7">
+                <img src="./img/nodejs.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 8"> 
+                <img src="./img/nextjs.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 9">
+                <img src="./img/mysql.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 10"> 
+                <img src="./img/mongodb.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 11">
+                <img src="./img/c_logo.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 12">
+                <img src="./img/c++.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 13">
+                <img src="./img/csharp.png" alt=""/>
+            </div>
+            <div class="item" style="--position: 14">
+                <img src="./img/java.png" alt=""/>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="forfun2">
-        <h3>Uses</h3>
-    </section>
-
-    <section id="uses">
-        <div class="use-container">
-            <div class="use-grid">
-                <div class="use-pros">
-                    <i class='bx bxl-visual-studio'></i>
-                    <p>VS Code</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-figma"></i>
-                    <p>Figma</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-chrome"></i>
-                    <p>Google Chrome</p>
-                </div>
-                <div class="use-pros">
-                    <img src="img/Chat GPT.png" alt="">
-                    <p>ChatGPT</p>
-                </div>
-                <div class="use-pros">
-                    <img src="img/Screenshot 2024-05-17 212634.png" alt="">
-                    <p>Notion</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-apple"></i>
-                    <p>iPhone</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-youtube"></i>
-                    <p>YouTube</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-pinterest"></i>
-                    <p>Pinterest</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-webflow"></i>
-                    <p>Webflow</p>
-                </div>
-                <div class="use-pros">
-                    <i class="fa-brands fa-github"></i>
-                    <p>GitHub</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="forfun3">
         <h3>Projects</h3>
@@ -221,8 +197,17 @@
                         <img class="toyz" src="img/HI-Toyz.png" alt="">
                     </div>
                     <div class="des">
-                         <h4>HI-Toyz (E-Commerce Website)</h4>
-                         <a href="https://richardozora.github.io/E-Commerce-Website/index.html" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                            <h4>HI-Toyz (E-Commerce Website)</h4>
+                            <a href="https://richardozora.github.io/E-Commerce-Website/index.html" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div> 
+                <div class="image" data-category="website">
+                    <div class="image-container">
+                        <img src="img/petpedia.png" alt="">
+                    </div>
+                    <div class="des">
+                         <h4>PetPedia</h4>
+                         <a href="https://pet-pedia-frontend.vercel.app/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="image" data-category="website">
@@ -232,15 +217,6 @@
                     <div class="des">
                          <h4>Simple Calculator</h4>
                          <a href="https://richardozora.github.io/Calcu/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="image" data-category="website">
-                    <div class="image-container">
-                        <img class="carousel" src="https://albertleonardi.vercel.app/static/media/work6.095790a21d4b43285283.jpg" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>Simple Carousel</h4>
-                         <a href="https://richardozora.github.io/Carousel/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="image" data-category="design">
@@ -254,11 +230,11 @@
                 </div>
                 <div class="image" data-category="design">
                     <div class="image-container">
-                        <img src="img/calm.png" alt="">
+                        <img src="img/holland.png" alt="">
                     </div>
                     <div class="des">
-                         <h4>Calm (UI Design)</h4>
-                         <a href="https://www.figma.com/proto/ceZbMEkbv0OeEFyUa5lxki/UTS-HCI?node-id=0-1" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
+                         <h4>Holland Bakery (UI Design)</h4>
+                         <a href="https://www.figma.com/proto/BAx39NwZ1POIa8m1gjNXEP/Holland-Bakery?node-id=1-2&node-type=canvas&t=zrsfclJTmihgguMP-0&scaling=contain&content-scaling=fixed&page-id=0%3A1" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="image" data-category="website">
@@ -292,7 +268,7 @@
     <script src="https://kit.fontawesome.com/7592240626.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script>
+    <!-- <script>
         function shouldRunAnimation() {
             return window.innerWidth > 768;
         }
@@ -312,24 +288,24 @@
             tl.to(".loader .line", {
                 scaleY: 0,
                 transformOrigin: 'top',
-                duration: 2,
-                delay: 0.2
+                duration: 1,
+                delay: 0.1
             });
 
             tl.to(".loader .circles span", {
                 scale: 0,
-                duration: 1.5,
+                duration: 1,
                 stagger: {
                     grid: [3, 3],
                     from: 'random',
-                    each: 0.2,
+                    each: 0.1,
                 }
             })
             .from("h1 span", {
                 x: "random(-500, 500, 100)",
                 y: "random(-500, 500, 100)",
                 ease: "power2.inOut",
-                duration: 3,
+                duration: 2,
                 delay: -0.5,
                 opacity: 0
             })
@@ -343,14 +319,14 @@
             })
             .from("#header", {
                 y: -100,
-                duration: 2,
+                duration: 1,
                 opacity: 0
             })
             .add(() => {
                 document.querySelector('.loader').style.display = 'none';
             });
         }); 
-    </script>
+    </script> -->
     
     <script src="script.js"></script>
 </body>
