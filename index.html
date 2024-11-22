@@ -54,6 +54,7 @@
     </section>
 
     <section id="content">
+        <img class="w-40 h-40 border rounded-full ml-[205px]" src="img/profile.jpg" alt=""/>
         <h1>Richard</h1>
         <div class="content-container">
             <h5 class="text first-text">&gt;</h5>
@@ -279,7 +280,7 @@
                 return;
             }
 
-            $("#content h1, #content .content-container h5:not(.first-text), #content .ctc i").html(function(index, html) {
+            $("#content img, #content h1, #content .content-container h5:not(.first-text), #content .ctc i").html(function(index, html) {
                 return html.replace(/\S/g, '<span>$&</span>');
             });
 
@@ -309,7 +310,7 @@
                 delay: -0.5,
                 opacity: 0
             })
-            .from(".content-container h5", {
+            .from(".content-container h5, #content img", {
                 x: "random(-100, 100)",
                 y: "random(-100, 100)",
                 ease: "power2.inOut",
