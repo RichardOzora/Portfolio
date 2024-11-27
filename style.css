@@ -180,10 +180,6 @@ body{
     }
 }
 
-#content .profile{
-    
-}
-
 #content h1{
     font-size: 50px;
     text-transform: uppercase;
@@ -531,11 +527,6 @@ footer .isi .sosmed i{
     height: 100%;
 }
 
-.image .image-container img.carousel{
-    width: 100%;
-    height: 100%;
-}
-
 .image .image-container{
     width: 100%;
     height: 250px;
@@ -547,12 +538,12 @@ footer .isi .sosmed i{
     border: 1px solid #797171;
 }
 
-.image .des a{
+.image .desc a{
     text-decoration: none;
     color: black;
 }
 
-.image .des h4{
+.image .desc h4{
     padding-top: 5px;
     padding-bottom: 10px;
 }
@@ -580,7 +571,7 @@ footer .isi .sosmed i{
     transition: 0.3s ease;
 }
 
-#project .image .des{
+#project .image .desc{
     text-align: start;
     padding: 10px 0;
 }

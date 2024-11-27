@@ -191,61 +191,74 @@
                 </ul>
             </div>
         </div>
+        
         <div class="pros-container">
             <div class="pros-grid">
                 <div class="image" data-category="website">
-                    <div class="image-container">
-                        <img class="toyz" src="img/HI-Toyz.png" alt="">
-                    </div>
-                    <div class="des">
-                            <h4>HI-Toyz (E-Commerce Website)</h4>
-                            <a href="https://richardozora.github.io/E-Commerce-Website/index.html" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/hitoyz.html">
+                        <div class="image-container">
+                            <img class="toyz" src="img/HI-Toyz.png" alt="">
+                        </div>
+                        <div class="desc">
+                                <h4>HI-Toyz</h4>
+                                <h4>Web Application</h4>
+                        </div>
+                    </a>
                 </div> 
                 <div class="image" data-category="website">
-                    <div class="image-container">
-                        <img src="img/petpedia.png" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>PetPedia</h4>
-                         <a href="https://pet-pedia-frontend.vercel.app/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/petpedia.html">
+                        <div class="image-container">
+                            <img src="img/petpedia.png" alt="">
+                        </div>
+                        <div class="desc">
+                             <h4>PetPedia</h4>
+                             <h4>Web Application</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="image" data-category="website">
-                    <div class="image-container">
-                        <img class="calcu" src="https://i.pinimg.com/564x/89/d5/b4/89d5b4f592ed754e758f8e0c8ee0b49b.jpg" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>Simple Calculator</h4>
-                         <a href="https://richardozora.github.io/Calcu/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/calcu.html">
+                        <div class="image-container">
+                            <img class="calcu" src="https://i.pinimg.com/564x/89/d5/b4/89d5b4f592ed754e758f8e0c8ee0b49b.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                             <h4>Calculator</h4>
+                             <h4>Web Application</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="image" data-category="design">
-                    <div class="image-container">
-                        <img src="img/HI-Toyz.png" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>HI-Toyz (UI Design)</h4>
-                         <a href="https://www.figma.com/proto/ZrKw5Y8jxzZ2h7nGZkROwm/HCI-Project?node-id=1-2&starting-point-node-id=1%3A2&scaling=scale-down-width" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/hitoyzui.html">
+                        <div class="image-container">
+                            <img src="img/HI-Toyz.png" alt="">
+                        </div>
+                        <div class="desc">
+                             <h4>HI-Toyz</h4>
+                             <h4>UI Design</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="image" data-category="design">
-                    <div class="image-container">
-                        <img src="img/holland.png" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>Holland Bakery (UI Design)</h4>
-                         <a href="https://www.figma.com/proto/BAx39NwZ1POIa8m1gjNXEP/Holland-Bakery?node-id=1-2&node-type=canvas&t=zrsfclJTmihgguMP-0&scaling=contain&content-scaling=fixed&page-id=0%3A1" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/holland.html">
+                        <div class="image-container">
+                            <img src="img/holland.png" alt="">
+                        </div>
+                        <div class="desc">
+                             <h4>Holland Bakery</h4>
+                             <h4>UI Design</h4>
+                        </div>
+                    </a>
                 </div>
                 <div class="image" data-category="website">
-                    <div class="image-container">
-                        <img src="https://i.pinimg.com/236x/62/bb/ae/62bbae1c921ef1b1a3d72ac8856eb5d6.jpg" alt="">
-                    </div>
-                    <div class="des">
-                         <h4>Simple To-Do List</h4>
-                         <a href="https://to-do-list-gamma-liard.vercel.app/" target="_blank">Demo <i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <a href="projects/todo.html">
+                        <div class="image-container">
+                            <img src="https://i.pinimg.com/236x/62/bb/ae/62bbae1c921ef1b1a3d72ac8856eb5d6.jpg" alt="">
+                        </div>
+                        <div class="desc">
+                             <h4>To-Do List</h4>
+                             <h4>Web Application</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -271,7 +284,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
         function shouldRunAnimation() {
-            return window.innerWidth > 768;
+            return window.innerWidth > 768 && !sessionStorage.getItem("animationPlayed");
         }
 
         $(document).ready(function() {
@@ -331,6 +344,7 @@
             })
             .add(() => {
                 document.querySelector('.loader').style.display = 'none';
+                sessionStorage.setItem("animationPlayed", true);
             });
         }); 
     </script>
