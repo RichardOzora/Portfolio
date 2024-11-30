@@ -9,3 +9,9 @@
     height: auto;
     padding-top: 20px;
 }
+
+.img2{
+    width: 80%;
+    display: flex;
+    gap: 110px;
+}
